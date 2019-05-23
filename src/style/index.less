@@ -1,0 +1,113 @@
+/*重构样式*/
+
+//将base.css拷贝一份原样输出到这个文件中
+@import (inline)"common/base.css";
+
+.header{
+  height: 44px;
+  width: 100%;
+  background: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  line-height: 44px;
+  .left,.right{
+    width: 52px;
+    height: 100%;
+    background: #000;
+    font-size: 14px;
+    a{
+      color: #fff;
+    }
+    .iconfont{
+     font-size: 22px;
+      color: #fff;
+    }
+  }
+  .center{
+    height: 30px;
+    flex:1;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    border-radius: 30px;
+    overflow: hidden;
+    .iconfont{
+      padding: 0 6px;
+    }
+    .icon-jingdong{
+      color: #e93b3d;
+      font-size: 20px;
+      margin-left: 10px;
+      position: relative;
+      &:after{
+        content: "";
+        width: 1px;
+        height: 16px;
+        position: absolute;
+        right: 0;
+        top: 14px;
+        background: #ccc;
+      }
+    }
+    .icon-sousuo{
+      font-size: 18px;
+      color: #999;
+    }
+    input{
+      height: 100%;
+      flex: 1;
+      text-indent: 5px;
+      color: #000;
+    }
+
+  }
+
+
+}
+
+.content{
+  height: 200px;
+  background: purple;
+}
+
+.footer{
+  height: 44px;
+  width: 100%;
+  background: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  ul{
+    height: 100%;
+    display: flex;
+
+    li{
+      flex: 1;
+      &.active{
+        a{
+          color: #e93b3d;
+        }
+      }
+    }
+  }
+  a{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .iconfont{
+    font-size: 20px;
+  }
+
+  p{
+    font-size: 12px;
+    transform: scale(0.89);
+
+  }
+}
